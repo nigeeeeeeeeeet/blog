@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Головна — Мій блог{% endblock %}
+
+{% block body %}
+    {% include 'banner.html' %}
+
+    <h1>Головна сторінка</h1>
+
+    <a href="{{ url_for('about') }}" class="user-preview">
+        <img class="avatar-small" src="{{ url_for('static', filename='images/' ~ user.photo) }}" alt="{{ user.name }}">
+        <span class="user-name">{{ user.name }}</span>
+        <p class="user-short-description">{{ user.short_description }}</p>
+    </a>
+
+    <p class="blog-description">
+        Цей блог присвячений розробці, геймдеву та особистим нотаткам про шлях у програмуванні.
+    </p>
+{% endblock %}

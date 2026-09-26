@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Про мене — Мій блог{% endblock %}
+
+{% block body %}
+    <h1>Про мене</h1>
+
+    <img class="avatar-big" src="{{ url_for('static', filename='images/' ~ user.photo) }}" alt="{{ user.name }}">
+    <h2>{{ user.name }}</h2>
+    <p class="user-short-description">{{ user.short_description }}</p>
+    <p class="user-full-description">{{ user.full_description }}</p>
+{% endblock %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Мій блог{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    {% include 'menu.html' %}
+
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+
+    {% include 'footer.html' %}
+</body>
+</html>
